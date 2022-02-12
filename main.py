@@ -70,7 +70,7 @@ def iniciar():
             label_tempo['text'] = temporario
             tempo = temporario
             
-        #   Aqui estou colocando o tempo para percorrer menos de 1s, para diminuir o tempo de exucução de amostra da aplicação do cronômetro.
+        #   Aqui estou colocando o tempo para percorrer menos de 1s, para diminuir o tempo de execução de amostra da aplicação.
         label_tempo.after(300, iniciar)
         contador += 1
 
@@ -99,20 +99,20 @@ def pausar():
 #   Criando labels: Cronômetro
 figura.grid()
 label_app = Label(janela, text='Cronômetro', font=('Arial 10'))
-label_tempo = Label(janela, text=tempo, font=('Times 50 bold'))
+label_tempo = Label(janela, text=tempo, font=('Times 50 bold'), bd=0, highlightthickness=0)
 
 #   Posicionamento para dentro da janela
 label_app.place(x=20, y=5)
 label_tempo.place(x=25, y=140)
 
 #   Criando botões: Iniciar, Pausa, Reiniciar
-botao_iniciar = Button(janela, command=start, text='Iniciar', width=10, height=2, bg=cor1, fg=cor2, font=('Ivi 8 bold'), relief='raised', overrelief='ridge')
+botao_iniciar = Button(janela, command=start, text='Iniciar', width=10, height=2, bg=cor1, fg=cor2, font=('Ivi 8 bold'), relief='raised', overrelief='ridge', bd=0, highlightthickness=0)
 botao_iniciar.place(x=12, y=230)
 
-botao_pausar = Button(janela, command=pausar, text='Pausar', width=10, height=2, bg=cor1, fg=cor2, font=('Ivi 8 bold'), relief='raised', overrelief='ridge')
+botao_pausar = Button(janela, command=pausar, text='Pausar', width=10, height=2, bg=cor1, fg=cor2, font=('Ivi 8 bold'), relief='raised', overrelief='ridge', bd=0, highlightthickness=0)
 botao_pausar.place(x=113, y=230)
 
-botao_reiniciar = Button(janela, command=reiniciar, text='Reiniciar', width=10, height=2, bg=cor1, fg=cor2, font=('Ivi 8 bold'), relief='raised', overrelief='ridge')
+botao_reiniciar = Button(janela, command=reiniciar, text='Reiniciar', width=10, height=2, bg=cor1, fg=cor2, font=('Ivi 8 bold'), relief='raised', overrelief='ridge', bd=0, highlightthickness=0)
 botao_reiniciar.place(x=211, y=230)
 
 
