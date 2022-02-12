@@ -76,6 +76,12 @@ def start():
     rodar = True
     iniciar()
 
+def pausar():
+    global rodar
+    rodar = False
+    
+    
+    
 #   Criando labels: Cronômetro
 label_app = Label(janela, text='Cronômetro', font=('Arial 10'), bg=cor1, fg=cor2)
 label_tempo = Label(janela, text=tempo, font=('Times 50 bold'), bg=cor1, fg=cor3)
@@ -88,7 +94,7 @@ label_tempo.place(x=20, y=30)
 botao_iniciar = Button(janela, command=start, text='Iniciar', width=10, height=2, bg=cor1, fg=cor2, font=('Ivi 8 bold'), relief='raised', overrelief='ridge')
 botao_iniciar.place(x=12, y=130)
 
-botao_pausar = Button(janela, text='Pausar', width=10, height=2, bg=cor1, fg=cor2, font=('Ivi 8 bold'), relief='raised', overrelief='ridge')
+botao_pausar = Button(janela, command=pausar, text='Pausar', width=10, height=2, bg=cor1, fg=cor2, font=('Ivi 8 bold'), relief='raised', overrelief='ridge')
 botao_pausar.place(x=113, y=130)
 
 botao_reiniciar = Button(janela, text='Reiniciar', width=10, height=2, bg=cor1, fg=cor2, font=('Ivi 8 bold'), relief='raised', overrelief='ridge')
