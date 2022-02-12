@@ -31,12 +31,13 @@ label_tempo.place(x=20, y=30)
 
 '''Criando botões: Iniciar, Pausa,'''
 botao_iniciar = Button(janela, text='Iniciar', width=10, height=2, bg=cor1, fg=cor2, font=('Ivi 8 bold'), relief='raised', overrelief='ridge')
-botao_iniciar.place(x=15, y=130)
+botao_iniciar.place(x=12, y=130)
 
 botao_pausar = Button(janela, text='Pausar', width=10, height=2, bg=cor1, fg=cor2, font=('Ivi 8 bold'), relief='raised', overrelief='ridge')
-botao_pausar.place(x=115, y=130)
+botao_pausar.place(x=113, y=130)
 
-botao_reiniciar = Button(janela, text='Reiniciar', width=10, height=2, bg=cor1, fg=cor2)
+botao_reiniciar = Button(janela, text='Reiniciar', width=10, height=2, bg=cor1, fg=cor2, font=('Ivi 8 bold'), relief='raised', overrelief='ridge')
+botao_reiniciar.place(x=211, y=130)
 
 
 
