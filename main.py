@@ -35,7 +35,7 @@ tempo = '00:00:00'
 rodar = False
 contador = -5
 
-
+#   Função Iniciar
 def iniciar():
     global tempo
     global contador
@@ -71,16 +71,27 @@ def iniciar():
         label_tempo.after(300, iniciar)
         contador += 1
 
+#   Função Pausar
 def start():
     global rodar
     rodar = True
     iniciar()
 
+#   Função Reiniciar
+def reiniciar():
+    global contador
+    global tempo
+    
+    #   Reiniciando o tempo do contador
+    contador = 0
+    
+    #   Reiniciando o tempo
+    tempo = '00:00:00'
+    label_tempo['text'] = tempo
+    
 def pausar():
     global rodar
     rodar = False
-    
-    
     
 #   Criando labels: Cronômetro
 label_app = Label(janela, text='Cronômetro', font=('Arial 10'), bg=cor1, fg=cor2)
@@ -97,7 +108,7 @@ botao_iniciar.place(x=12, y=130)
 botao_pausar = Button(janela, command=pausar, text='Pausar', width=10, height=2, bg=cor1, fg=cor2, font=('Ivi 8 bold'), relief='raised', overrelief='ridge')
 botao_pausar.place(x=113, y=130)
 
-botao_reiniciar = Button(janela, text='Reiniciar', width=10, height=2, bg=cor1, fg=cor2, font=('Ivi 8 bold'), relief='raised', overrelief='ridge')
+botao_reiniciar = Button(janela, command=reiniciar, text='Reiniciar', width=10, height=2, bg=cor1, fg=cor2, font=('Ivi 8 bold'), relief='raised', overrelief='ridge')
 botao_reiniciar.place(x=211, y=130)
 
 
